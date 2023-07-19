@@ -1,0 +1,6 @@
+name: sabre 
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - sabre
