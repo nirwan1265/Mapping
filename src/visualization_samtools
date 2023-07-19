@@ -1,0 +1,1 @@
+samtools tview your_file_sorted.bam your_reference_genome.fasta
