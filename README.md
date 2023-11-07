@@ -14,6 +14,12 @@ The alignment is done with [minimap2](https://academic.oup.com/bioinformatics/ar
 Basic viewing of the alignment can be done with [samtools](http://www.htslib.org/doc/). The detailed installation process for a linux distribution can be found [here](http://www.htslib.org/download/).  
 
 ## Quality Control
-The quality control was done using samtools with the parameters Q > 15. The script is present here.
+Post-alignment QC is equally important to remove potential sources of error. Using samtools, reads with a mapping quality (Q) score of less than 15 are filtered out to ensure only high-confidence alignments are considered for analysis. Duplicated reads are identified and removed using Picard tools to avoid inflating read counts filtering was also done for base quality score recalibration (BQSR) Furthermore, regions that did not map to the reference genome are also excised from the dataset. The exact commands and scripts for this QC step will be added to the repository for reference.
+
+## Genotype Likelihood Estimation
+For populations like B73 x Teosinte/Landraces, estimating genotype likelihoods is a necessary step before calling SNPs. This is particularly useful in accounting for the uncertainty in the data due to sequencing errors or allelic dropout. Genotype likelihood estimation can be performed using tools like angsd. Here, we would provide a script and a detailed description of the process to compute the likelihood of genotypes for each individual at each SNP position, taking into account the depth of coverage and the quality of reads.
+
+
+
 
 
